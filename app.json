@@ -1,0 +1,2225 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.sensative.strips",
+  "version": "2.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "Sensative Strips",
+    "nl": "Sensative Strips"
+  },
+  "description": {
+    "en": "The architect's choice!",
+    "nl": "De keuze van de architect!"
+  },
+  "category": [
+    "localization"
+  ],
+  "tags": {
+    "en": [
+      "security",
+      "alarm",
+      "contact",
+      "window",
+      "door",
+      "temperature",
+      "humidity",
+      "leakage",
+      "light",
+      "switch"
+    ],
+    "nl": [
+      "beveiliging",
+      "alarm",
+      "contact",
+      "raam",
+      "deur",
+      "temperatuur",
+      "vochtigheid",
+      "lekkage",
+      "licht",
+      "schakelaar"
+    ]
+  },
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Sensative AB"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Marcel Veldhuizen",
+        "email": "marcel@thorarin.net",
+        "hint": "Most of the code is from Marcel and other contributors of Z-Wave 500 series Strips products."
+      },
+      {
+        "name": "Baasandash Damdinbazar",
+        "email": "baasandash@sensative.com"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/dparyani/com.sensative.strips/issues"
+  },
+  "source": "https://github.com/dparyani/com.sensative.strips",
+  "homepage": "https://sensative.com",
+  "support": "https://sensative.com/contact/",
+  "brandColor": "#004225",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "switch_on",
+        "title": {
+          "en": "Slider switch on",
+          "nl": "Schuifregelaar switch aan"
+        },
+        "hint": {
+          "en": "+Switch accessory on Strips Comfort 700 slided towards the square edge triggers Central Scene Notification.",
+          "nl": "+Switch accessoire op Strips Comfort 700 geschoven naar de vierkante rand activeert Centrale Scènemelding."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=strips-comfort-700"
+          }
+        ]
+      },
+      {
+        "id": "switch_off",
+        "title": {
+          "en": "Slider switch off",
+          "nl": "Schuifregelaar switch uit"
+        },
+        "hint": {
+          "en": "+Switch accessory on Strips Comfort 700 slided away from the square edge triggers Central Scene Notification.",
+          "nl": "+Switch accessoire op Strips Comfort 700 schuift weg van de vierkante rand en activeert Centrale Scènemelding."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=strips-comfort-700"
+          }
+        ]
+      },
+      {
+        "id": "high_ambient_light_level_trigger",
+        "title": {
+          "en": "High ambient light level is reached",
+          "nl": "Hoog omgevingslichtniveau is bereikt"
+        },
+        "hint": {
+          "en": "Enable and set configuration parameter 10 & 11 for this trigger to work. The sensor will send a Central Scene Notification when the light rises above high ambient light level.",
+          "nl": "Activeer en stel configuratie parameter 10 & 11 in om deze trigger te laten werken. De sensor stuurt een Centrale Scènemelding wanneer het licht boven het hoge omgevings licht niveau uit stijgt."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=strips-comfort-700"
+          }
+        ]
+      },
+      {
+        "id": "low_ambient_light_level_trigger",
+        "title": {
+          "en": "Low ambient light level is reached",
+          "nl": "Laag omgevingslichtniveau is bereikt"
+        },
+        "hint": {
+          "en": "Enable and set configuration parameter 10 & 11 for this trigger to work. The sensor will send a Central Scene Notification when the light goes below low ambient light level.",
+          "nl": "Activeer en stel configuratie parameter 10 & 11 in om deze trigger te laten werken. De sensor stuurt een Centrale Scènemelding wanneer het licht onder het lage omgevings licht niveau komt."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=strips-comfort-700"
+          }
+        ]
+      },
+      {
+        "id": "high_temperature_alarm",
+        "title": {
+          "en": "High temperature alarm turned on",
+          "nl": "Alarm voor hoge temperatuur ingeschakeld"
+        },
+        "hint": {
+          "en": "Enable and set configuration parameter 6, 7 & 8 for this trigger to work. The sensor will send a Central Scene Notification when the temperature rises above high temperature alarm level.",
+          "nl": "Activeer en stel configuratie parameter 6, 7 & 8 in om deze trigger te laten werken. De sensor stuurt een Centrale Scènemelding wanneer de temperatuur boven het alarm niveau voor hoge temperatuur stijgt."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=strips-comfort-700"
+          }
+        ]
+      },
+      {
+        "id": "low_temperature_alarm",
+        "title": {
+          "en": "Low temperature alarm turned on",
+          "nl": "Alarm lage temperatuur ingeschakeld"
+        },
+        "hint": {
+          "en": "Enable and set configuration parameter 6, 7 & 8 for this trigger to work. The sensor will send a Central Scene Notification when the temperature goes below low temperature alarm level.",
+          "nl": "Activeer en stel configuratie parameter 6, 7 & 8 in om deze trigger te laten werken. De sensor stuurt een Centrale Scènemelding wanneer de temperatuur onder het alarm niveau voor lage temperatuur komt."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=strips-comfort-700"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Strips Comfort 700",
+        "nl": "Strips Comfort 700"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_battery",
+        "measure_temperature",
+        "alarm_heat",
+        "button.reset_heat_alarm",
+        "measure_humidity",
+        "measure_luminance",
+        "alarm_tamper",
+        "button.reset_tamper_alarm"
+      ],
+      "capabilitiesOptions": {
+        "button.reset_heat_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset heat alarm",
+            "nl": "Hitte alarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the heat alarm after it has been triggered.",
+            "nl": "Schakel het hitte alarm handmatig uit nadat deze is getriggerd."
+          }
+        },
+        "button.reset_tamper_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset tamper alarm",
+            "nl": "Sabotage alarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the tamper alarm after it has been triggered.",
+            "nl": "Schakel het sabotage alarm handmatig uit nadat deze is getriggerd."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "images": {
+        "small": "/drivers/strips-comfort-700/assets/images/small.png",
+        "large": "/drivers/strips-comfort-700/assets/images/large.png",
+        "xlarge": "/drivers/strips-comfort-700/assets/images/xlarge.png"
+      },
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
+      "zwave": {
+        "manufacturerId": 410,
+        "productTypeId": [
+          4
+        ],
+        "productId": [
+          12
+        ],
+        "zwaveAllianceProductId": 12,
+        "wakeUpInterval": 43200,
+        "learnmode": {
+          "image": "/drivers/strips-comfort-700/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "1. Place the magnet on the rounded end then remove it and observe the LED blink once\n2. Repeat 3 times in 10 seconds\n\nOne long LED blink means Strips has been successfully added to your Z-Wave network",
+            "nl": "1. Plaats de magneet op het afgeronde uiteinde, verwijder deze en kijk hoe de LED eenmaal knippert\n2. Herhaal dit 3 keer in 10 seconden\n\nEen lange LED knippering betekent dat Strips succesvol is toegevoegd aan je Z-Wave netwerk"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/strips-comfort-700/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "1. Place the magnet on the rounded end then remove it and observe the LED blink once\n2. Repeat 3 times in 10 seconds\n\nOne long LED blink means Strips has been successfully removed from your Z-Wave network",
+            "nl": "1. Plaats de magneet op het afgeronde uiteinde, verwijder deze en kijk hoe de LED eenmaal knippert\n2. Herhaal dit 3 keer in 10 seconden\n\nEen lange LED knippering betekent dat Strips succesvol is verwijderd uit je Z-Wave netwerk"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline",
+              "nl": "Z-Wave Plus Reddingslijn"
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Binary Switch",
+              "nl": "Binaire Switch"
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Basic Set for Binary Switch",
+              "nl": "Basis Set voor Binaire Switch"
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "Thermostat Mode Set for Binary Switch",
+              "nl": "Thermostaat modus Set voor Binaire Switch"
+            }
+          },
+          "5": {
+            "hint": {
+              "en": "Temperature Report for Temperature Alarms",
+              "nl": "Temperatuur Rapport voor Temperatuur alarmen"
+            }
+          },
+          "6": {
+            "hint": {
+              "en": "Basic Set for Temperature Alarms",
+              "nl": "Basis Set voor Temperatuur alarmen"
+            }
+          },
+          "7": {
+            "hint": {
+              "en": "Basic Set for Ambient Light Report Levels",
+              "nl": "Basis Set voor Omgevingslicht Rapport Niveaus"
+            }
+          }
+        }
+      },
+      "id": "strips-comfort-700",
+      "settings": [
+        {
+          "id": "led_indication",
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "label": {
+            "en": "LED alarm event reporting",
+            "nl": "LED alarm gebeurtenis rapportage"
+          },
+          "type": "dropdown",
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "0: Off",
+                "nl": "0: Uit"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "1: On, but no LED indication for associated nodes (1/5 blinks)",
+                "nl": "1: Aan, maar geen LED indicatie voor bijbehorende knooppunten (1/5 knippert)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "2: On with LED indications based on success/fail for BOTH the gateway and the associated nodes",
+                "nl": "2: Aan met LED indicaties op basis van succes/mislukt voor ZOWEL de gateway en de bijbehorende knooppunten"
+              }
+            }
+          ],
+          "hint": {
+            "en": "Turn On or Off LED for specific event indications (ex. alarms)",
+            "nl": "Zet LED aan of uit voor specifieke gebeurtenisindicaties (bijv. alarmen)"
+          }
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "children": [
+            {
+              "id": "temperature_humidity_reporting_type",
+              "zwave": {
+                "index": 4,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature & Humidity reporting",
+                "nl": "Temperatuur & vochtigheids rapportage"
+              },
+              "type": "dropdown",
+              "value": "1",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "0: Off",
+                    "nl": "0: Uit"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1: On. Sends temperature/humidity based on difference from last reported value (set in config parameters 26 and 28)",
+                    "nl": "1: Aan. Verzendt temperatuur/vochtigheid op basis van verschil met laatst gerapporteerde waarde (ingesteld in configuratie parameters 26 en 28)"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "2: On. Timed reporting of the actual temperature and the actual humidity value (set time in config parameter 25)",
+                    "nl": "2: Aan. Getimede rapportage van de werkelijke temperatuur en de werkelijke vochtigheids waarde (ingestelde tijd in configuratie parameter 25)"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "3: On. Timed  reporting of the average temperature value between reports. Will also send the actual humidity value (set time in config parameter 25)",
+                    "nl": "3: Aan. Getimede rapportage van de gemiddelde temperatuur waarde tussen rapporten. Zal ook de actuele vochtigheids waarde verzenden (ingestelde tijd in configuratie parameter 25)"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Select temperature and humidity reporting",
+                "nl": "Selecteer temperatuur en vochtigheids rapportage"
+              }
+            },
+            {
+              "id": "temperature_alarms",
+              "zwave": {
+                "index": 6,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature alarms",
+                "nl": "Temperatuur alarmen"
+              },
+              "type": "checkbox",
+              "value": false,
+              "hint": {
+                "en": "Turn On or Off the temperature alarm (Independent of config parameter 4 setting)",
+                "nl": "Zet het temperatuur alarm aan of uit (onafhankelijk van de instelling van configuratie parameter 4)"
+              }
+            },
+            {
+              "id": "temperature_high",
+              "zwave": {
+                "index": 7,
+                "size": 2
+              },
+              "label": {
+                "en": "Select a high temperature alarm level",
+                "nl": "Selecteer een alarm niveau voor hoge temperatuur"
+              },
+              "type": "number",
+              "value": 40,
+              "attr": {
+                "min": -20,
+                "max": 80
+              },
+              "hint": {
+                "en": "Select a high temperature alarm level",
+                "nl": "Selecteer een alarm niveau voor hoge temperatuur"
+              }
+            },
+            {
+              "id": "temperature_low",
+              "zwave": {
+                "index": 8,
+                "size": 2
+              },
+              "label": {
+                "en": "Low temperature alarm level",
+                "nl": "Alarm niveau lage temperatuur"
+              },
+              "type": "number",
+              "value": 5,
+              "attr": {
+                "min": -20,
+                "max": 60
+              },
+              "hint": {
+                "en": "Select a low temperature alarm level",
+                "nl": "Selecteer een alarm niveau voor lage temperatuur"
+              }
+            },
+            {
+              "id": "temperature_humidity_reporting_period",
+              "zwave": {
+                "index": 25,
+                "size": 2,
+                "signed": false
+              },
+              "label": {
+                "en": "Temperature and Humidity reporting time (Activated in config parameter 4)",
+                "nl": "Rapport agetijd temperatuur en vochtigheid (geactiveerd in configuratie parameter 4)"
+              },
+              "type": "number",
+              "value": 60,
+              "attr": {
+                "min": 15,
+                "max": 1440
+              },
+              "hint": {
+                "en": "Select the number of minutes between reports (15 mins to 24 hrs)",
+                "nl": "Selecteer het aantal minuten tussen rapporten (15 minuten tot 24 uur)"
+              }
+            },
+            {
+              "id": "temperature_change",
+              "zwave": {
+                "index": 26,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Temperature change for next report (Activated in config parameter 4)",
+                "nl": "Temperatuur verandering voor volgend rapport (Geactiveerd in configuratie parameter 4)"
+              },
+              "type": "number",
+              "value": 20,
+              "attr": {
+                "min": 5,
+                "max": 100
+              },
+              "hint": {
+                "en": "Temperature must change by this value for a new report (Input value converted to one decimal place [= 0.5 to 10.0 (degree C/F)])",
+                "nl": "Voor een nieuw rapport moet de temperatuur met deze waarde veranderen (Invoerwaarde geconverteerd naar één decimaal [= 0,5 tot 10,0 (graden C/F)])"
+              }
+            },
+            {
+              "id": "humidity_change",
+              "zwave": {
+                "index": 28,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Humidity change for next report (Activated in config parameter 4)",
+                "nl": "Vochtigheids verandering voor volgend rapport (Geactiveerd in configuratie parameter 4)"
+              },
+              "type": "number",
+              "value": 5,
+              "attr": {
+                "min": 2,
+                "max": 10
+              },
+              "hint": {
+                "en": "Humidity must change by this value for a new report (%)",
+                "nl": "Vochtigheid moet met deze waarde veranderen voor een nieuw rapport (%)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Light"
+          },
+          "children": [
+            {
+              "id": "light_reporting",
+              "zwave": {
+                "index": 9,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Ambient light reporting",
+                "nl": "Omgevingslicht rapportage"
+              },
+              "type": "number",
+              "value": 8,
+              "attr": {
+                "min": 0,
+                "max": 8
+              },
+              "hint": {
+                "en": "Ambient light report settings. Using a filter (low-pass) is highly recommended to avoid large amounts of reports in fluctuating lights.",
+                "nl": "Instellingen voor omgevingslicht rapporten. Het gebruik van een filter (low-pass) wordt sterk aanbevolen om grote hoeveelheden meldingen bij wisselend licht te voorkomen."
+              }
+            },
+            {
+              "id": "light_high",
+              "zwave": {
+                "index": 10,
+                "size": 4
+              },
+              "label": {
+                "en": "High ambient light (LUX) level trigger",
+                "nl": "Trigger voor hoog omgevingslicht (LUX)"
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 64000
+              },
+              "hint": {
+                "en": "The sensor will send a light report when the light rises above this level. Can be used in scenarios to trigger other devices. When enabling parameter 10, parameter 11 must also be set with a lower value, else the trigger stays off. 0: Off, 20 - 64000: Valid range",
+                "nl": "De sensor stuurt een licht melding als het licht boven dit niveau komt. Kan in scenario's worden gebruikt om andere apparaten te activeren. Bij het inschakelen van parameter 10 moet parameter 11 ook op een lagere waarde worden ingesteld, anders blijft de trigger uit. 0: Uit, 20 - 64000: Geldig bereik"
+              }
+            },
+            {
+              "id": "light_low",
+              "zwave": {
+                "index": 11,
+                "size": 4
+              },
+              "label": {
+                "en": "Low ambient light (LUX) level trigger",
+                "nl": "Laag omgevingslicht (LUX) niveau trigger"
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 42000
+              },
+              "hint": {
+                "en": "The sensor will send a light report when the light goes below this level. Can be used in scenarios to trigger other devices. When enabling parameter 11, parameter 10 must also be set with a greater value, else the trigger stays off. 0: Off, 10 - 42000: Valid range",
+                "nl": "De sensor stuurt een licht rapport als het licht onder dit niveau komt. Kan in scenario's worden gebruikt om andere apparaten te activeren. Bij het inschakelen van parameter 11 moet parameter 10 ook op een hogere waarde worden ingesteld, anders blijft de trigger uit. 0: Uit, 10 - 42000: Geldig bereik"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Slider Switch",
+            "nl": "Schuifregelaar Switch"
+          },
+          "children": [
+            {
+              "id": "slider_switch_function",
+              "zwave": {
+                "index": 29,
+                "size": 1
+              },
+              "label": {
+                "en": "Slider switch function",
+                "nl": "Schuifregelaar switch functie"
+              },
+              "type": "dropdown",
+              "value": "1",
+              "values": [
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1. Binary Switch",
+                    "nl": "1. Binaire Schakelaar"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "2. Timed Switch",
+                    "nl": "2. Tijdschakelaar"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Select if the switch should act as a binary switch or a timed switch",
+                "nl": "Selecteer of de switch moet werken als een binaire schakelaar of een tijdschakelaar"
+              }
+            },
+            {
+              "id": "timed_switch_duration",
+              "zwave": {
+                "index": 30,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Timed Switch duration",
+                "nl": "Tijdschakelduur"
+              },
+              "type": "number",
+              "value": 5,
+              "attr": {
+                "min": 1,
+                "max": 60
+              },
+              "hint": {
+                "en": "Select the duration (in minutes) that should trigger the opposite state of the Switch (if 2 is selected in config parameter 29)",
+                "nl": "Selecteer de duur (in minuten) die de tegenovergestelde status van de Switch moet activeren (als 2 is geselecteerd in configuratie parameter 29)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Z-Wave Command Class"
+          },
+          "children": [
+            {
+              "id": "multi-Command_encapsulation",
+              "zwave": {
+                "index": 31,
+                "size": 1
+              },
+              "label": {
+                "en": "Use Multi-Command encapsulation"
+              },
+              "type": "checkbox",
+              "value": false,
+              "hint": {
+                "en": "Send Temperature and Humidity sensor value reports and or Temperature Alarms related reports (Notification Report + Multi-Level Sensor Report + Central Scene Notification) in one message, this saves battery power. Make sure your gateway supports Multi-Command Command Class first",
+                "nl": "Verzend temperatuur en vochtigheids sensor waarde rapporten en of temperatuur alarmen gerelateerde rapporten (Meldingsrapport + Multi-Level Sensorrapport + Centrale Scènemelding) in één bericht, dit bespaart batterijvermogen. Zorg er eerst voor dat uw gateway Multi-Command Command Class ondersteunt"
+              }
+            },
+            {
+              "id": "central_scene_notifications",
+              "zwave": {
+                "index": 32,
+                "size": 1
+              },
+              "label": {
+                "en": "Use Central Scene Notifications",
+                "nl": "Centrale scènemeldingen gebruiken"
+              },
+              "type": "checkbox",
+              "value": true,
+              "hint": {
+                "en": "Central Scene Notifications are sent for the Slider Switch state change, High and Low Temperature Alarms and High and Low Ambient Light states.\nScenes could be configured in the gateway. Scenes allow multiple devices to be controlled by a single Z-Wave command",
+                "nl": "Er worden centrale scènemeldingen verzonden voor de status wijziging van de schuifregelaar Switch, hoge en lage temperatuur alarmen en hoge en lage omgevingslicht statussen.\nScènes kunnen worden geconfigureerd in de gateway. Met scènes kunnen meerdere apparaten worden bestuurd door een enkele Z-Wave opdracht"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Associations"
+          },
+          "children": [
+            {
+              "id": "association_grp_3_basic_set_on",
+              "zwave": {
+                "index": 33,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Basic Set value sent to Association group 3 when the slider switch is on",
+                "nl": "Basis instel waarde verzonden naar Associatiegroep 3 wanneer de schuifregelaar switch aan staat"
+              },
+              "type": "number",
+              "value": 255,
+              "attr": {
+                "min": 0,
+                "max": 255
+              },
+              "hint": {
+                "en": "This config parameter defines the value sent to the devices in the Association group 3 (using Basic Command Class)",
+                "nl": "Deze configuratie parameter definieert de waarde die naar de apparaten in de Associatiegroep 3 wordt verzonden (met behulp van Basic Command Class)"
+              }
+            },
+            {
+              "id": "association_grp_3_basic_set_off",
+              "zwave": {
+                "index": 34,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Basic Set value sent to Association group 3 when the slider switch is off",
+                "nl": "Basis Set waarde verzonden naar Associatiegroep 3 wanneer de schuifregelaar switch is uitgeschakeld"
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 255
+              },
+              "hint": {
+                "en": "This config parameter defines the value sent to the devices in the Association group 3 (using Basic Command Class)",
+                "nl": "Deze configuratie parameter definieert de waarde die naar de apparaten in de Associatiegroep 3 wordt verzonden (met behulp van Basic Command Class)"
+              }
+            },
+            {
+              "id": "association_grp_4_thermostat_mode_on",
+              "zwave": {
+                "index": 35,
+                "size": 1
+              },
+              "label": {
+                "en": "Thermostat mode for Association group 4 when the slider switch is on",
+                "nl": "Thermostaat modus voor Associatiegroep 4 wanneer de schuifregelaar switch aan staat"
+              },
+              "type": "number",
+              "value": 1,
+              "attr": {
+                "min": 1,
+                "max": 13
+              },
+              "hint": {
+                "en": "This config parameter defines the value sent to the devices in the Association group 4 (using Thermostat Mode Command Class). Refer the Thermostat modes supported by the associated node",
+                "nl": "Deze configuratie parameter definieert de waarde die naar de apparaten in de Associatiegroep 4 wordt gestuurd (met behulp van de Commando klasse Thermostaat modus). Raadpleeg de thermostaat modi die worden ondersteund door het bijbehorende knooppunt"
+              }
+            },
+            {
+              "id": "association_grp_6_basic_set_high_temp",
+              "zwave": {
+                "index": 36,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Basic Set value sent to Association group 6 on High Temperature Alarm",
+                "nl": "Basis Set waarde verzonden naar associatiegroep 6 bij alarm voor hoge temperatuur"
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 255
+              },
+              "hint": {
+                "en": "This config parameter defines the value sent to the devices in the Association group 6 (using Basic Command Class)",
+                "nl": "Deze configuratie parameter definieert de waarde die naar de apparaten in de Associatiegroep 6 wordt verzonden (met behulp van Basic Command Class)"
+              }
+            },
+            {
+              "id": "association_grp_6_basic_set_low_temp",
+              "zwave": {
+                "index": 37,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Basic Set value sent to Association group 6 on Low Temperature Alarm",
+                "nl": "Basis Set waarde verzonden naar associatiegroep 6 bij alarm lage temperatuur"
+              },
+              "type": "number",
+              "value": 255,
+              "attr": {
+                "min": 0,
+                "max": 255
+              },
+              "hint": {
+                "en": "This config parameter defines the value sent to the devices in the Association group 6 (using Basic Command Class)",
+                "nl": "Deze configuratie parameter definieert de waarde die naar de apparaten in de Associatiegroep 6 wordt verzonden (met behulp van Basic Command Class)"
+              }
+            },
+            {
+              "id": "association_grp_7_basic_set_high_light_level",
+              "zwave": {
+                "index": 38,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Basic Set value sent to the Association group 7 on High ambient light level report",
+                "nl": "Basis Set waarde verzonden naar Associatiegroep 7 op rapport Hoog omgevingslicht niveau"
+              },
+              "type": "number",
+              "value": 255,
+              "attr": {
+                "min": 0,
+                "max": 255
+              },
+              "hint": {
+                "en": "This config parameter defines the value sent to the devices in the Association group 7 (using Basic Command Class)",
+                "nl": "Deze configuratie parameter definieert de waarde die naar de apparaten in de Associatiegroep 7 wordt verzonden (met behulp van Basic Command Class)"
+              }
+            },
+            {
+              "id": "association_grp_7_basic_set_low_light_level",
+              "zwave": {
+                "index": 39,
+                "size": 1,
+                "signed": false
+              },
+              "label": {
+                "en": "Basic Set value sent to the Association group 7 on Low ambient light level report",
+                "nl": "Basis Set waarde verzonden naar Associatiegroep 7 op rapport Laag omgevingslicht"
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 255
+              },
+              "hint": {
+                "en": "This config parameter defines the value sent to the devices in the Association group 7 (using Basic Command Class)",
+                "nl": "Deze configuratie parameter definieert de waarde die naar de apparaten in de Associatiegroep 7 wordt verzonden (met behulp van Basic Command Class)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Capabilities",
+            "nl": "Mogelijkheden"
+          },
+          "children": [
+            {
+              "value": true,
+              "id": "tamper_alarm",
+              "label": {
+                "en": "Tamper alarm",
+                "nl": "Sabotage alarm"
+              },
+              "hint": {
+                "en": "Used to show or hide the tamper alarm capability.",
+                "nl": "Hiermee kan de sabotage-alarmfunctie getoond of verborgen worden."
+              },
+              "type": "checkbox"
+            },
+            {
+              "id": "maintenance_actions",
+              "label": {
+                "en": "Maintenance actions",
+                "nl": "Maintenance actions"
+              },
+              "hint": {
+                "en": "Disabling this hides maintenance actions on this device. Maintenance actions are known to confuse HomeyKit, classifying the sensor as a switch.",
+                "nl": "Wanneer uitgeschakeld worden de onderhoudsacties voor dit apparaat verborgen. Onderhoudsacties verwarren HomeyKit, waardoor de sensor als schakelaar geclassificeerd wordt."
+              },
+              "type": "checkbox",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Strips Drip 700",
+        "nl": "Strips Drip 700"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_battery",
+        "measure_temperature",
+        "alarm_heat",
+        "measure_humidity",
+        "alarm_water",
+        "button.reset_water_alarm",
+        "button.reset_heat_alarm",
+        "alarm_tamper",
+        "button.reset_tamper_alarm"
+      ],
+      "capabilitiesOptions": {
+        "button.reset_heat_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset heat alarm",
+            "nl": "Hitte alarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the heat alarm after it has been triggered.",
+            "nl": "Schakel het hitte alarm handmatig uit nadat deze is getriggerd."
+          }
+        },
+        "button.reset_water_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset water alarm",
+            "nl": "Wateralarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the water alarm after it has been triggered.",
+            "nl": "Schakel het wateralarm handmatig uit nadat deze is getriggerd."
+          }
+        },
+        "button.reset_tamper_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset tamper alarm",
+            "nl": "Sabotage alarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the tamper alarm after it has been triggered.",
+            "nl": "Schakel het sabotage alarm handmatig uit nadat deze is getriggerd."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "images": {
+        "small": "/drivers/strips-drip-700/assets/images/small.png",
+        "large": "/drivers/strips-drip-700/assets/images/large.png",
+        "xlarge": "/drivers/strips-drip-700/assets/images/xlarge.png"
+      },
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
+      "zwave": {
+        "manufacturerId": 410,
+        "productTypeId": [
+          4
+        ],
+        "productId": [
+          11
+        ],
+        "zwaveAllianceProductId": 11,
+        "wakeUpInterval": 43200,
+        "learnmode": {
+          "image": "/drivers/strips-drip-700/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "1. Place the magnet on the rounded end then remove it and observe the LED blink once\n2. Repeat 3 times in 10 seconds\n\nOne long LED blink means Strips has been successfully added to your Z-Wave network",
+            "nl": "1. Plaats de magneet op het afgeronde uiteinde, verwijder deze en kijk hoe de LED eenmaal knippert\n2. Herhaal dit 3 keer in 10 seconden\n\nEen lange LED knippering betekent dat Strips succesvol is toegevoegd aan je Z-Wave netwerk"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/strips-drip-700/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "1. Place the magnet on the rounded end then remove it and observe the LED blink once\n2. Repeat 3 times in 10 seconds\n\nOne long LED blink means Strips has been successfully removed from your Z-Wave network",
+            "nl": "1. Plaats de magneet op het afgeronde uiteinde, verwijder deze en kijk hoe de LED eenmaal knippert\n2. Herhaal dit 3 keer in 10 seconden\n\nEen lange LED knippering betekent dat Strips succesvol is verwijderd uit je Z-Wave netwerk"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline",
+              "nl": "Z-Wave Plus Reddingslijn"
+            }
+          }
+        }
+      },
+      "id": "strips-drip-700",
+      "settings": [
+        {
+          "id": "led_indication",
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "label": {
+            "en": "LED alarm event reporting",
+            "nl": "LED alarm gebeurtenis rapportage"
+          },
+          "type": "checkbox",
+          "value": true,
+          "hint": {
+            "en": "Turn On or Off LED for specific event indications (ex. alarms)",
+            "nl": "Zet de LED aan of uit voor specifieke gebeurtenis indicaties (bijv. alarmen)"
+          }
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "children": [
+            {
+              "id": "temperature_reporting",
+              "zwave": {
+                "index": 4,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature reporting",
+                "nl": "Temperatuur rapportage"
+              },
+              "hint": {
+                "en": "Does not affect temperature alarms",
+                "nl": "Heeft geen invloed op temperatuur alarmen"
+              },
+              "type": "dropdown",
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "0: Off",
+                    "nl": "0: Uit"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1: On. Reports the actual value when the temperature is changed according to parameter 26 since the last report or at least according to the reporting period set in the config parameter 25.",
+                    "nl": "1: Aan. Rapporteert de werkelijke waarde wanneer de temperatuur is gewijzigd volgens parameter 26 sinds de laatste rapportage of ten minste volgens de rapport ageperiode die is ingesteld in de configuratie parameter 25."
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "2: On. Reports the actual value periodically based on the config parameter 25.",
+                    "nl": "2: Aan. Rapporteert periodiek de werkelijke waarde op basis van de configuratie parameter 25."
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "3: On. The average temperature during the period is sent periodically during every wake up interval.",
+                    "nl": "3: Aan. De gemiddelde temperatuur tijdens de periode wordt periodiek verzonden tijdens elk wekinterval."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "temperature_alarms",
+              "zwave": {
+                "index": 6,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature alarms",
+                "nl": "Temperatuur alarmen"
+              },
+              "type": "checkbox",
+              "value": false
+            },
+            {
+              "id": "temperature_high",
+              "zwave": {
+                "index": 7,
+                "size": 1
+              },
+              "label": {
+                "en": "High temperature alarm level",
+                "nl": "Alarm niveau bij hoge temperatuur"
+              },
+              "hint": {
+                "en": "-20 to +80 degrees Celcius",
+                "nl": "-20 to +80 degrees Celsius"
+              },
+              "type": "number",
+              "value": 40,
+              "attr": {
+                "min": -20,
+                "max": 80
+              }
+            },
+            {
+              "id": "temperature_low",
+              "zwave": {
+                "index": 8,
+                "size": 1
+              },
+              "label": {
+                "en": "Low temperature alarm level",
+                "nl": "Alarm niveau lage temperatuur"
+              },
+              "hint": {
+                "en": "-20 to +60 degrees Celcius",
+                "nl": "-20 to +60 degrees Celsius"
+              },
+              "type": "number",
+              "value": 5,
+              "attr": {
+                "min": -20,
+                "max": 60
+              }
+            },
+            {
+              "id": "temperature_offset",
+              "zwave": {
+                "index": 24,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature offset",
+                "nl": "Temperatuur offset"
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": -100,
+                "max": 100
+              },
+              "hint": {
+                "en": "The offset value is used to calibrate the 1 byte temperature reports in the actual temperature. [=-10.0 to +10.0 (Degree C)]",
+                "nl": "De offset waarde wordt gebruikt om de 1-byte temperatuur rapporten in de werkelijke temperatuur te kalibreren. [=-10,0 tot +10,0 (graad C)]"
+              }
+            },
+            {
+              "id": "temperature_reporting_period",
+              "zwave": {
+                "index": 25,
+                "size": 2
+              },
+              "label": {
+                "en": "Temperature reporting period",
+                "nl": "Temperatuur rapportage periode"
+              },
+              "type": "number",
+              "value": 1440,
+              "attr": {
+                "min": 15,
+                "max": 1440
+              },
+              "hint": {
+                "en": "Select the number of minutes between the temperature reports (15 minutes to 24 hours) (Used for parameter 4)",
+                "nl": "Selecteer het aantal minuten tussen de temperatuur rapporten (15 minuten tot 24 uur) (Gebruikt voor parameter 4)"
+              }
+            },
+            {
+              "id": "temperature_delta",
+              "zwave": {
+                "index": 26,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature delta",
+                "nl": "Temperatuur delta"
+              },
+              "type": "number",
+              "value": 20,
+              "attr": {
+                "min": 5,
+                "max": 100
+              },
+              "hint": {
+                "en": "A new temperature report is sent when the temperature has changed more than the delta value. Input value converted to one decimal place. [=0.5 to 10.0 (Degree C)]",
+                "nl": "Een nieuw temperatuur rapport wordt verzonden wanneer de temperatuur meer is veranderd dan de deltawaarde. Invoerwaarde geconverteerd naar één decimaal. [=0,5 tot 10,0 (graad C)]"
+              }
+            },
+            {
+              "id": "temperature_hysteresis",
+              "zwave": {
+                "index": 27,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature hysteresis for temperature alarms",
+                "nl": "Temperatuur hysterese voor temperatuur alarmen"
+              },
+              "type": "number",
+              "value": 20,
+              "attr": {
+                "min": 5,
+                "max": 100
+              },
+              "hint": {
+                "en": "Triggers alarm clear reports (See parameters 7&8). Input value converted to one decimal place.  [=0.5 to 10.0 (Degree C)]",
+                "nl": "Activeert alarm wissen rapporten (Zie parameters 7&8). Invoerwaarde geconverteerd naar één decimaal. [=0,5 tot 10,0 (graad C)]"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Leakage\\Moisture"
+          },
+          "children": [
+            {
+              "id": "leakage_alarm",
+              "zwave": {
+                "index": 12,
+                "size": 1
+              },
+              "label": {
+                "en": "Leakage alarm"
+              },
+              "type": "checkbox",
+              "value": true,
+              "hint": {
+                "en": "Turn the Leakage Alarm to On or Off",
+                "nl": "Zet het lekkage alarm aan of uit"
+              }
+            },
+            {
+              "id": "leakage_alarm_level",
+              "zwave": {
+                "index": 13,
+                "size": 1
+              },
+              "label": {
+                "en": "Leakage alarm level",
+                "nl": "Lekkage alarm niveau"
+              },
+              "type": "number",
+              "value": 10,
+              "attr": {
+                "min": 1,
+                "max": 100
+              },
+              "hint": {
+                "en": "1 to 100\r\n(1=almost dry, 100=wet)",
+                "nl": "1 tot 100\r\n(1=bijna droog, 100=nat)"
+              }
+            },
+            {
+              "id": "moisture_reporting_interval",
+              "zwave": {
+                "index": 14,
+                "size": 1
+              },
+              "label": {
+                "en": "Moisture reporting period",
+                "nl": "Vocht rapportage periode"
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 120
+              },
+              "hint": {
+                "en": "Select the number of hours between moisture reports. Report values between -100 to 100",
+                "nl": "Selecteer het aantal uren tussen vochtrapporten. Rapporteer waarden tussen -100 tot 100"
+              }
+            },
+            {
+              "id": "leakage_sensor_calibration",
+              "zwave": {
+                "index": 23,
+                "size": 1
+              },
+              "label": {
+                "en": "Perform leakage/moisture sensor calibration",
+                "nl": "Kalibratie van lekkage/vochtsensor uitvoeren"
+              },
+              "type": "dropdown",
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "0: Device resets to this value after performing capacitance calibration and sends a report with value 0 to the gateway (as recommended by ZWave Specifications)",
+                    "nl": "0: apparaat reset naar deze waarde na het uitvoeren van capaciteits kalibratie en stuurt een rapport met waarde 0 naar de gateway (zoals aanbevolen door ZWave-specificaties)"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1: Perform Calibration",
+                    "nl": "1: Kalibratie uitvoeren"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Should be performed when Drip is mounted correctly and absolutely dry to calibrate the \"zero-level\". A MultiLevel Sensor Report with the Moisture value is sent after the calibration is performed",
+                "nl": "Moet worden uitgevoerd wanneer Drip correct en absoluut droog is gemonteerd om het \"nulniveau\" te kalibreren. Een MultiLevel sensor rapport met de vochtigheids waarde wordt verzonden nadat de kalibratie is uitgevoerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "activate_supervision",
+          "zwave": {
+            "index": 15,
+            "size": 1
+          },
+          "label": {
+            "en": "Activate supervision",
+            "nl": "Supervisie activeren"
+          },
+          "type": "dropdown",
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "0: Events sent with S2 Encapsulation only",
+                "nl": "0: Gebeurtenissen verzonden met alleen S2 Encapsulation"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "1: Alarm Report (Only for alarm events (e.g. Leakage alarm))",
+                "nl": "1: Alarm rapport (Alleen voor alarm gebeurtenissen (bijv. Lekkage alarm))"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "2: All Reports",
+                "nl": "2: Alle rapporten"
+              }
+            }
+          ],
+          "hint": {
+            "en": "Activate Supervision command for alarm events or all events. Supervised commands require a confirmation from the gateway when a notification is received.",
+            "nl": "Activeer het Supervisie commando voor alarm gebeurtenissen of alle gebeurtenissen. Bewaakte opdrachten vereisen een bevestiging van de gateway wanneer een melding wordt ontvangen."
+          }
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Capabilities",
+            "nl": "Mogelijkheden"
+          },
+          "children": [
+            {
+              "value": true,
+              "id": "tamper_alarm",
+              "label": {
+                "en": "Tamper alarm",
+                "nl": "Sabotage alarm"
+              },
+              "hint": {
+                "en": "Used to show or hide the tamper alarm capability.",
+                "nl": "Hiermee kan de sabotage-alarmfunctie getoond of verborgen worden."
+              },
+              "type": "checkbox"
+            },
+            {
+              "id": "maintenance_actions",
+              "label": {
+                "en": "Maintenance actions",
+                "nl": "Maintenance actions"
+              },
+              "hint": {
+                "en": "Disabling this hides maintenance actions on this device. Maintenance actions are known to confuse HomeyKit, classifying the sensor as a switch.",
+                "nl": "Wanneer uitgeschakeld worden de onderhoudsacties voor dit apparaat verborgen. Onderhoudsacties verwarren HomeyKit, waardoor de sensor als schakelaar geclassificeerd wordt."
+              },
+              "type": "checkbox",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Strips Guard",
+        "nl": "Strips Guard"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_battery",
+        "alarm_contact",
+        "alarm_tamper",
+        "button.reset_tamper_alarm"
+      ],
+      "capabilitiesOptions": {
+        "button.reset_tamper_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset tamper alarm",
+            "nl": "Sabotage-alarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the tamper alarm after it has been triggered.",
+            "nl": "Schakel het sabotage-alarm handmatig uit nadat deze is getriggerd."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
+      "images": {
+        "small": "/drivers/strips-guard/assets/images/small.png",
+        "large": "/drivers/strips-guard/assets/images/large.png",
+        "xlarge": "/drivers/strips-guard/assets/images/xlarge.png"
+      },
+      "zwave": {
+        "manufacturerId": 410,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          3
+        ],
+        "zwaveAllianceProductId": 3,
+        "learnmode": {
+          "image": "/drivers/strips-guard/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "Place the round magnet at the rounded edge. When the LED blinks, move the magnet away. Repeat 3 times within 10 seconds.",
+            "nl": "Plaats de ronde magneet op de afgeronde zijde. Haal de magneet weer weg als de LED knippert. Herhaal 3 keer binnen 10 seconden."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/strips-guard/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "1. Place the magnet on the rounded end then remove it and observe the LED blink once\n2. Repeat 3 times in 10 seconds\n\nOne long LED blink means Strips has been successfully removed from your Z-Wave network",
+            "nl": "1. Plaats de magneet op het afgeronde uiteinde, verwijder deze en kijk hoe de LED eenmaal knippert\n2. Herhaal dit 3 keer in 10 seconden\n\nEen lange LED knippering betekent dat Strips succesvol is verwijderd uit je Z-Wave netwerk"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 1,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 2,
+            "size": 1,
+            "value": 1
+          }
+        ]
+      },
+      "id": "strips-guard",
+      "settings": [
+        {
+          "id": "report_type",
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "label": {
+            "en": "Notification type",
+            "nl": "Notificatietype"
+          },
+          "hint": {
+            "en": "Z-Wave command class used for reporting contact sensor events. Notification is typically best.",
+            "nl": "Z-Wave command class die gebruikt wordt voor rapportages van de contactsensor. Notification heeft meestal de voorkeur."
+          },
+          "type": "dropdown",
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Binary Sensor",
+                "nl": "Binary Sensor"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Notification",
+                "nl": "Notification"
+              }
+            }
+          ]
+        },
+        {
+          "id": "led_indication",
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "label": {
+            "en": "LED indication",
+            "nl": "led-indicatie"
+          },
+          "hint": {
+            "en": "When enabled, the LED on Strips will flash shortly when the door/window is opened.",
+            "nl": "Wanneer ingeschakeld zal de led op Strips kort oplichten als de deur of het raam wordt geopened."
+          },
+          "type": "checkbox",
+          "value": true
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Capabilities",
+            "nl": "Functies"
+          },
+          "children": [
+            {
+              "id": "tamper_alarm",
+              "label": {
+                "en": "Tamper alarm",
+                "nl": "Sabotage alarm"
+              },
+              "hint": {
+                "en": "Used to show or hide the tamper alarm capability.",
+                "nl": "Hiermee kan de sabotage-alarmfunctie getoond of verborgen worden."
+              },
+              "type": "checkbox",
+              "value": true
+            },
+            {
+              "id": "maintenance_actions",
+              "label": {
+                "en": "Maintenance actions",
+                "nl": "Maintenance actions"
+              },
+              "hint": {
+                "en": "Disabling this hides maintenance actions on this device. Maintenance actions are known to confuse HomeyKit, classifying the sensor as a switch.",
+                "nl": "Wanneer uitgeschakeld worden de onderhoudsacties voor dit apparaat verborgen. Onderhoudsacties verwarren HomeyKit, waardoor de sensor als schakelaar geclassificeerd wordt."
+              },
+              "type": "checkbox",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Strips Guard 700",
+        "nl": "Strips Guard 700"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_battery",
+        "alarm_contact",
+        "alarm_tamper",
+        "button.reset_tamper_alarm"
+      ],
+      "capabilitiesOptions": {
+        "button.reset_tamper_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset tamper alarm",
+            "nl": "Sabotage alarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the tamper alarm after it has been triggered.",
+            "nl": "Schakel het sabotage alarm handmatig uit nadat deze is getriggerd."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "images": {
+        "small": "/drivers/strips-guard-700/assets/images/small.png",
+        "large": "/drivers/strips-guard-700/assets/images/large.png",
+        "xlarge": "/drivers/strips-guard-700/assets/images/xlarge.png"
+      },
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
+      "zwave": {
+        "manufacturerId": 410,
+        "productTypeId": [
+          4
+        ],
+        "productId": [
+          4
+        ],
+        "zwaveAllianceProductId": 4,
+        "wakeUpInterval": 43200,
+        "learnmode": {
+          "image": "/drivers/strips-guard-700/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "1. Place the magnet on the rounded end then remove it and observe the LED blink once\n2. Repeat 3 times in 10 seconds\n\nOne long LED blink means Strips has been successfully added to your Z-Wave network",
+            "nl": "1. Plaats de magneet op het afgeronde uiteinde, verwijder deze en kijk hoe de LED eenmaal knippert\n2. Herhaal dit 3 keer in 10 seconden\n\nEen lange LED knippering betekent dat Strips succesvol is toegevoegd aan je Z-Wave netwerk"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/strips-guard-700/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "1. Place the magnet on the rounded end then remove it and observe the LED blink once\n2. Repeat 3 times in 10 seconds\n\nOne long LED blink means Strips has been successfully removed from your Z-Wave network",
+            "nl": "1. Plaats de magneet op het afgeronde uiteinde, verwijder deze en kijk hoe de LED eenmaal knippert\n2. Herhaal dit 3 keer in 10 seconden\n\nEen lange LED knippering betekent dat Strips succesvol is verwijderd uit je Z-Wave netwerk"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline",
+              "nl": "Z-Wave Plus Reddingslijn"
+            }
+          }
+        }
+      },
+      "id": "strips-guard-700",
+      "settings": [
+        {
+          "id": "led_indication",
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "label": {
+            "en": "LED indication",
+            "nl": "LED indicatie"
+          },
+          "hint": {
+            "en": "When enabled, the LED on Strips will flash shortly when the door/window is opened.",
+            "nl": "Indien ingeschakeld, knippert de LED op Strips kort wanneer de deur/het raam wordt geopend."
+          },
+          "type": "checkbox",
+          "value": true
+        },
+        {
+          "id": "activate_supervision",
+          "label": {
+            "en": "Activate supervision",
+            "nl": "Supervisie activeren"
+          },
+          "hint": {
+            "en": "Activate Supervision command for only important alarm events or all events (*Supervised commands require a confirmation from the gateway when a notification is received)",
+            "nl": "Activeer de supervisieopdracht voor alleen belangrijke alarm gebeurtenissen of alle gebeurtenissen (*Bewaakte opdrachten vereisen een bevestiging van de gateway wanneer een melding wordt ontvangen)"
+          },
+          "zwave": {
+            "index": 15,
+            "size": 1
+          },
+          "type": "dropdown",
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "0: Events sent with S2 Encapsulation only",
+                "nl": "0: Gebeurtenissen verzonden met alleen S2 Encapsulation"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "1: Only Door Open Alarm Report (Events sent with S2 and supervision encapsulation)",
+                "nl": "1: Alleen alarm rapport deur open (gebeurtenissen verzonden met S2 en supervisie inkapseling)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "2: Unsolicited reports (Door Open/Close,Tamper/clear, Wake-up notification and Battery Report events sent with S2 and supervision encapsulation)",
+                "nl": "2: Ongevraagde rapporten (deur open/dicht, sabotage/wissen, wekmelding en batterijrapportgebeurtenissen verzonden met S2 en supervisie inkapseling)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Capabilities",
+            "nl": "Mogelijkheden"
+          },
+          "children": [
+            {
+              "id": "tamper_alarm",
+              "label": {
+                "en": "Tamper alarm",
+                "nl": "Sabotage alarm"
+              },
+              "hint": {
+                "en": "Used to show or hide the tamper alarm capability.",
+                "nl": "Hiermee kan de sabotage-alarmfunctie getoond of verborgen worden."
+              },
+              "type": "checkbox",
+              "value": true
+            },
+            {
+              "id": "maintenance_actions",
+              "label": {
+                "en": "Maintenance actions",
+                "nl": "Maintenance actions"
+              },
+              "hint": {
+                "en": "Disabling this hides maintenance actions on this device. Maintenance actions are known to confuse HomeyKit, classifying the sensor as a switch.",
+                "nl": "Wanneer uitgeschakeld worden de onderhoudsacties voor dit apparaat verborgen. Onderhoudsacties verwarren HomeyKit, waardoor de sensor als schakelaar geclassificeerd wordt."
+              },
+              "type": "checkbox",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Strips MultiSensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature",
+        "measure_luminance",
+        "measure_humidity",
+        "alarm_heat",
+        "alarm_water",
+        "measure_battery",
+        "alarm_battery",
+        "alarm_tamper",
+        "button.reset_heat_alarm",
+        "button.reset_water_alarm",
+        "button.reset_tamper_alarm"
+      ],
+      "capabilitiesOptions": {
+        "button.reset_heat_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset heat alarm",
+            "nl": "Hitte-alarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the heat alarm after it has been triggered.",
+            "nl": "Schakel het hitte-alarm handmatig uit nadat deze is getriggerd."
+          }
+        },
+        "button.reset_water_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset water alarm",
+            "nl": "wateralarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the water alarm after it has been triggered.",
+            "nl": "Schakel het wateralarm handmatig uit nadat deze is getriggerd."
+          }
+        },
+        "button.reset_tamper_alarm": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Reset tamper alarm",
+            "nl": "Sabotage-alarm resetten"
+          },
+          "desc": {
+            "en": "Manually reset the tamper alarm after it has been triggered.",
+            "nl": "Schakel het sabotage-alarm handmatig uit nadat deze is getriggerd."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
+      "images": {
+        "small": "/drivers/strips-multisensor/assets/images/small.png",
+        "large": "/drivers/strips-multisensor/assets/images/large.png",
+        "xlarge": "/drivers/strips-multisensor/assets/images/xlarge.png"
+      },
+      "zwave": {
+        "manufacturerId": 410,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          10
+        ],
+        "zwaveAllianceProductId": 10,
+        "learnmode": {
+          "image": "/drivers/strips-multisensor/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "Place the round magnet at the rounded edge. When the LED blinks, move the magnet away. Repeat 3 times within 10 seconds.",
+            "nl": "Plaats de ronde magneet op de afgeronde zijde. Haal de magneet weer weg als de LED knippert. Herhaal 3 keer binnen 10 seconden."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/strips-multisensor/assets/images/learnmode.svg",
+          "instruction": {
+            "en": "1. Place the magnet on the rounded end then remove it and observe the LED blink once\n2. Repeat 3 times in 10 seconds\n\nOne long LED blink means Strips has been successfully removed from your Z-Wave network",
+            "nl": "1. Plaats de magneet op het afgeronde uiteinde, verwijder deze en kijk hoe de LED eenmaal knippert\n2. Herhaal dit 3 keer in 10 seconden\n\nEen lange LED knippering betekent dat Strips succesvol is verwijderd uit je Z-Wave netwerk"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      },
+      "id": "strips-multisensor",
+      "settings": [
+        {
+          "id": "led_indication",
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "label": {
+            "en": "LED alarm event reporting",
+            "nl": "LED alarm event rapportage"
+          },
+          "type": "checkbox",
+          "value": true
+        },
+        {
+          "id": "reporting_frequency",
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "label": {
+            "en": "Temperature & Light reporting frequency",
+            "nl": "Temperatuur & Light rapportage frequency"
+          },
+          "hint": {
+            "en": "Refer to the Sensative support site for details on how this affects the accuracy, number of reports and battery life",
+            "nl": "Kijk op de Sensative support site voor informatie over hoe dit accuraatheid, aantal rapportages en levensduur van de batterij beïnvloedt"
+          },
+          "type": "dropdown",
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Normal",
+                "nl": "Normaal"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Frequent",
+                "nl": "Frequent"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "children": [
+            {
+              "id": "temperature_reporting",
+              "zwave": {
+                "index": 4,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature reporting",
+                "nl": "Temperatuur rapportage"
+              },
+              "hint": {
+                "en": "Does not affect temperature alarms",
+                "nl": "Heeft geen invloed op temperatuuralarmering"
+              },
+              "type": "checkbox",
+              "value": true
+            },
+            {
+              "id": "temperature_alarms",
+              "zwave": {
+                "index": 6,
+                "size": 1
+              },
+              "label": {
+                "en": "Temperature alarms",
+                "nl": "Temperatuuralarmering"
+              },
+              "type": "checkbox",
+              "value": false
+            },
+            {
+              "id": "temperature_high",
+              "zwave": {
+                "index": 7,
+                "size": 1
+              },
+              "label": {
+                "en": "High temperature alarm level",
+                "nl": "Hoge temperatuur alarm niveau"
+              },
+              "hint": {
+                "en": "-20 to +60 degrees Celcius",
+                "nl": "-20 tot +60 graden Celsius"
+              },
+              "type": "number",
+              "value": 60,
+              "attr": {
+                "min": -20,
+                "max": 60
+              }
+            },
+            {
+              "id": "temperature_low",
+              "zwave": {
+                "index": 8,
+                "size": 1
+              },
+              "label": {
+                "en": "Low temperature alarm level",
+                "nl": "Lage temperatuur alarm niveau"
+              },
+              "hint": {
+                "en": "-20 to +60 degrees Celcius",
+                "nl": "-20 tot +60 graden Celcius"
+              },
+              "type": "number",
+              "value": -20,
+              "attr": {
+                "min": -20,
+                "max": 60
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Light",
+            "nl": "Licht"
+          },
+          "children": [
+            {
+              "id": "light_reporting",
+              "zwave": {
+                "index": 9,
+                "size": 1
+              },
+              "value": "1",
+              "label": {
+                "en": "Ambient light reporting",
+                "nl": "Omgevingslicht rapportage"
+              },
+              "hint": {
+                "en": "Bounds are configured by high and low ambient light report level.",
+                "nl": "Bounds are configured by high and low ambient light report level."
+              },
+              "type": "dropdown",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Off",
+                    "nl": "Uit"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "On",
+                    "nl": "Aan"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Only outside configured bounds",
+                    "nl": "Alleen buiten ingestelde grenzen"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "light_high",
+              "zwave": {
+                "index": 10,
+                "size": 4
+              },
+              "label": {
+                "en": "High ambient light report level",
+                "nl": "High ambient light report level"
+              },
+              "hint": {
+                "en": "3 to 64000",
+                "nl": "3 tot 64000"
+              },
+              "type": "number",
+              "value": 40000,
+              "attr": {
+                "min": 3,
+                "max": 64000
+              }
+            },
+            {
+              "id": "light_low",
+              "zwave": {
+                "index": 11,
+                "size": 4
+              },
+              "label": {
+                "en": "Low ambient light report level",
+                "nl": "Low ambient light report level"
+              },
+              "hint": {
+                "en": "1 to 42000. Must be significantly lower than high ambient light report level.",
+                "nl": "1 tot 42000. Must be significantly lower than high ambient light report level."
+              },
+              "type": "number",
+              "value": 5000,
+              "attr": {
+                "min": 1,
+                "max": 42000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Humidity",
+            "nl": "Vochtigheid"
+          },
+          "children": [
+            {
+              "id": "leakage_alarm",
+              "zwave": {
+                "index": 12,
+                "size": 1
+              },
+              "label": {
+                "en": "Leakage alarm",
+                "nl": "Lekkage-alarm"
+              },
+              "type": "checkbox",
+              "value": true
+            },
+            {
+              "id": "leakage_alarm_level",
+              "zwave": {
+                "index": 13,
+                "size": 1
+              },
+              "label": {
+                "en": "Leakage alarm level",
+                "nl": "Lekkage-alarm level"
+              },
+              "hint": {
+                "en": "1 to 100\r\n(1=almost dry, 100=wet)",
+                "nl": "1 tot 100\r\n(1=Bijna droog, 100=nat)"
+              },
+              "type": "number",
+              "value": 10,
+              "attr": {
+                "min": 1,
+                "max": 100
+              }
+            },
+            {
+              "id": "humidity_reporting_interval",
+              "zwave": {
+                "index": 14,
+                "size": 1
+              },
+              "label": {
+                "en": "Moisture reporting period",
+                "nl": "Vochtigheid rapportageperiode"
+              },
+              "hint": {
+                "en": "0-120: Number of hours between moisture reports (0=off)",
+                "nl": "0-120: Aantal uren tussen vochtigheidsrapportage (0=uit)"
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 120
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Capabilities",
+            "nl": "Functies"
+          },
+          "children": [
+            {
+              "id": "device_type",
+              "label": {
+                "en": "Device type",
+                "nl": "Apparaattype"
+              },
+              "hint": {
+                "en": "Used to show or hide measurement capabilities of the Strips Comfort and Drip, which are identical on an electronics level.\r\nHybrid: All measurement capabilities are shown.\r\nComfort: Only temperature and light measurement capabilities are shown.\r\nDrip: Only temperature and humidity measurement capabilities are shown.",
+                "nl": "Hiermee kunnen meetfuncties van de Strips Comfort en Drop (die identiek zijn op elektronica-niveau) getoond of verborgen worden.\r\nHybride: alle meetfuncties worden getoond.\r\nComfort: enkel temperatuur- en lichtmeetfuncties worden getoond.\r\nDrip: enkel temperatuur- en vochtigheidmeetfuncties worden getoond."
+              },
+              "type": "dropdown",
+              "value": "hybrid",
+              "values": [
+                {
+                  "id": "hybrid",
+                  "label": {
+                    "en": "Comfort/Drip Hybrid",
+                    "nl": "Comfort/Drip-hybride"
+                  }
+                },
+                {
+                  "id": "comfort",
+                  "label": {
+                    "en": "Comfort",
+                    "nl": "Comfort"
+                  }
+                },
+                {
+                  "id": "drip",
+                  "label": {
+                    "en": "Drip",
+                    "nl": "Drip"
+                  }
+                }
+              ]
+            },
+            {
+              "value": false,
+              "id": "tamper_alarm",
+              "label": {
+                "en": "Tamper alarm",
+                "nl": "Sabotage alarm"
+              },
+              "hint": {
+                "en": "Used to show or hide the tamper alarm capability.",
+                "nl": "Hiermee kan de sabotage-alarmfunctie getoond of verborgen worden."
+              },
+              "type": "checkbox"
+            },
+            {
+              "id": "maintenance_actions",
+              "label": {
+                "en": "Maintenance actions",
+                "nl": "Maintenance actions"
+              },
+              "hint": {
+                "en": "Disabling this hides maintenance actions on this device. Maintenance actions are known to confuse HomeyKit, classifying the sensor as a switch.",
+                "nl": "Wanneer uitgeschakeld worden de onderhoudsacties voor dit apparaat verborgen. Onderhoudsacties verwarren HomeyKit, waardoor de sensor als schakelaar geclassificeerd wordt."
+              },
+              "type": "checkbox",
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

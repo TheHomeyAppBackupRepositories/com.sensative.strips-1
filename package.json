@@ -1,0 +1,11 @@
+{
+  "name": "com.sensative.strips",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "homey-zwavedriver": "^2.1.8"
+  }
+}
